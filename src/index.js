@@ -12,6 +12,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter,Switch,Route,Link,} from "react-router-dom";
 import '../node_modules/font-awesome/css/font-awesome.min.css';
+import Mycart from './screens/Mycart';
 
 const routing = (<BrowserRouter>
        
@@ -21,6 +22,7 @@ const routing = (<BrowserRouter>
           <Route path="/login"  component={Login} />
           <Route path="/register"  component={Register} />
           <Route path="/ProductInformation"  component={ProductInformation} />
+          <Route path="/Mycart"  component={Mycart} />
           <Route component={Notfound} ></Route>
     
   </Switch>
