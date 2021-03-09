@@ -5,6 +5,7 @@ import App from './App';
 import Home from './screens/Home';
 import Login from './screens/Login';
 import Register from './screens/Register';
+import Register_second from './screens/Register_second';
 import ProductInformation from './screens/ProductInformation';
 import About_Us from './screens/About_Us';
 import Notfound from './screens/Notfound';
@@ -21,6 +22,7 @@ const routing = (<BrowserRouter>
           <Route path="/about_us"  component={About_Us} />
           <Route path="/login"  component={Login} />
           <Route path="/register"  component={Register} />
+          <Route path="/register_second"  component={Register_second} />
           <Route path="/ProductInformation"  component={ProductInformation} />
           <Route path="/Mycart"  component={Mycart} />
           <Route component={Notfound} ></Route>

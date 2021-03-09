@@ -10,7 +10,7 @@ function Register()
             <div className="row">
                 <div className="col-lg-4"></div>
                 <div className="col-lg-4 my_login_div">
-                    <h1 className="text-center"> Register  {window.location.pathname}</h1>
+                    <h1 className="text-center"> Register </h1>
 
                 <div className="form group">
                     <label>Email <span className="text-danger">*</span> </label>

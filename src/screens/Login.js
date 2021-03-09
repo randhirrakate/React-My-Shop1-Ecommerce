@@ -10,7 +10,7 @@ function Login()
             <div className="row">
                 <div className="col-lg-4"></div>
                 <div className="col-lg-4 my_login_div">
-                    <h1 className="text-center"> Login  {window.location.pathname}</h1>
+                    <h1 className="text-center"> Login </h1>
 
                 <div className="form group">
                     <label>Email <span className="text-danger">*</span> </label>
