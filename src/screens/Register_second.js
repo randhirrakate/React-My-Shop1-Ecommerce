@@ -1,11 +1,12 @@
 import React,{useState} from 'react'
-import Navbar_component from '../components/Navbar_component.js';
+import Navbar_component from '../components/Navbar_component';
+import {Function_registerAPI} from './API2';
 
 export default function Register_second() 
 {
 
-    const [values,setValues] = useState(
-        {
+    //array use state 
+   const [myvalues,setValues] = useState({
             name:'',
             email:'',
             password:'',
@@ -14,15 +15,58 @@ export default function Register_second()
         }
     );
 
+    
+    const [datafromBackend, updatedatafromBackendadd] = useState();
 
-    const { email, name, password, error, success } = values;  // variable pass to array 
 
+
+    const { email, name, password, error, success } = myvalues;  
+    
+    
 
       const handleChange = inputtype_name => e => 
       {
-        setValues( { ...values,[inputtype_name]: e.target.value } );
+        setValues( { ...myvalues,[inputtype_name]: e.target.value } );
       };
 
+
+      const onSubmit = event =>
+      {
+
+       event.preventDefault();
+       
+       setValues({ ...myvalues, error: false });
+
+       Function_registerAPI({ name, email, password })
+         .then(data => 
+            {
+           if (data.error) 
+           {
+             setValues({ ...myvalues, error: data.error, success: false });
+           } 
+           else 
+           {
+               
+            updatedatafromBackendadd(data);
+                    console.log(data);
+                    setValues({
+                    ...myvalues,
+                    name: "",
+                    email: "",
+                    password: "",
+                    error: false,
+                    success: true
+                    });
+           }
+         })
+       
+     };
+
+
+
+
+
+  
 
     return (
         <div>
@@ -55,7 +99,7 @@ export default function Register_second()
                                 </div>
                                 <div className="form-group">
 
-                                            <button className="btn btn-danger mx-auto d-block">Register</button>
+                                            <button onClick={onSubmit}   className="btn btn-danger mx-auto d-block">Register</button>
 
                                 </div>
 
@@ -63,13 +107,18 @@ export default function Register_second()
                     <div className="col-lg-4"></div>
 
                     <ul>
-                        <li>User Name : {name}</li>
-                        <li>User Email : {email}</li>
-                        <li>User password : {password}</li>
+                        <li>User Name : {myvalues.name}</li>
+                        <li>User Email : {myvalues.email}</li>
+                        <li>User password : {myvalues.password}</li>
                     </ul>
 
-            </div>
+                    <p>
+                        Data From Backend :   {JSON.stringify(updatedatafromBackendadd)}
 
+                    </p>
+
+            </div>
+          
         </div>
     )
 }
