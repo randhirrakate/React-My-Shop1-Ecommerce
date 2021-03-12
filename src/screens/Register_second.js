@@ -5,8 +5,8 @@ import {Function_registerAPI} from './API2';
 export default function Register_second() 
 {
 
-    //array use state 
-   const [myvalues,setValues] = useState({
+  //array use state 
+    const [myvalues,setValues] = useState({
             name:'',
             email:'',
             password:'',
@@ -19,9 +19,7 @@ export default function Register_second()
     const [datafromBackend, updatedatafromBackendadd] = useState();
 
 
-
     const { email, name, password, error, success } = myvalues;  
-    
     
 
       const handleChange = inputtype_name => e => 
@@ -62,11 +60,6 @@ export default function Register_second()
        
      };
 
-
-
-
-
-  
 
     return (
         <div>

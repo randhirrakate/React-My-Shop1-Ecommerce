@@ -8,12 +8,14 @@ import Register from './screens/Register';
 import Register_second from './screens/Register_second';
 import ProductInformation from './screens/ProductInformation';
 import About_Us from './screens/About_Us';
+import Mycart from './screens/Mycart';
+import Insert_product from './screens/Insert_product';
+import Insert_category from './screens/Insert_category';
 import Notfound from './screens/Notfound';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter,Switch,Route,Link,} from "react-router-dom";
 import '../node_modules/font-awesome/css/font-awesome.min.css';
-import Mycart from './screens/Mycart';
 
 const routing = (<BrowserRouter>
        
@@ -25,6 +27,8 @@ const routing = (<BrowserRouter>
           <Route path="/register_second"  component={Register_second} />
           <Route path="/ProductInformation"  component={ProductInformation} />
           <Route path="/Mycart"  component={Mycart} />
+          <Route path="/Insert_product"  component={Insert_product} />
+          <Route path="/Insert_category"  component={Insert_category} />
           <Route component={Notfound} ></Route>
     
   </Switch>

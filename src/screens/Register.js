@@ -15,6 +15,7 @@ function Register()
         success: false
       });
 
+
     const [datafromBackend, datafromBackendadd] = useState();
     
       const { name, email, password, error, success } = values;
@@ -55,6 +56,7 @@ function Register()
         //   .catch(console.log("Error in signup"));
       };
     
+      
     return(<div>
         <Navbar_component />
 
