@@ -15,6 +15,11 @@ function Register()
         errorMSG:"",
         success: false
       });
+      
+
+      const [datafromBackend, datafromBackendadd] = useState();
+    
+      const { name, email, password, error, errorMSG, success } = values;
 
 
       const mySuccessDiv = () =>
@@ -62,12 +67,7 @@ function Register()
           return mySuccessDiv();
         }
       }
-    
-
-
-      const [datafromBackend, datafromBackendadd] = useState();
-    
-      const { name, email, password, error, errorMSG, success } = values;
+  
     
       const handleChange = inputtype_name => event => {
         setValues({ ...values, error: false, [inputtype_name]: event.target.value });

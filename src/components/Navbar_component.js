@@ -32,12 +32,11 @@ function Navbar_component()
                     <Link className={"nav-link " + MyActiveClass("/Mycart")} to="/Mycart">My Cart</Link>
                     <Link className={"nav-link " + MyActiveClass("/login")} to="/login">Login</Link>
                     <Link className={"nav-link " + MyActiveClass("/register")} to="/register">Register</Link>
-                    <Link className={"nav-link " + MyActiveClass("/Contact")}  to="/Contact">Contact us</Link>
-                    <Link className={"nav-link " + MyActiveClass("/Register_second")}  to="/Register_second">Register_second</Link>
+                    <Link className={"nav-link " + MyActiveClass("/Contact")}  to="/Contact_us">Contact_us</Link> 
                     <Link className={"nav-link " + MyActiveClass("/Insert_product")}  to="/Insert_product">Insert_product</Link>
                     <Link className={"nav-link " + MyActiveClass("/Insert_category")}  to="/Insert_category">Insert_category</Link>
+                    <Link className={"nav-link " + MyActiveClass("/ProductInformation")}  to="/ProductInformation">ProductInformation</Link>
                 </Nav>
-
                 </Navbar.Collapse>
             </Navbar>
         </div>

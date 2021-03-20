@@ -47,11 +47,11 @@ export default function Mycart() {
             <tbody>
                 <tr>
                     <th>2</th>
-                    <th>Canon PowerShot SX430 IS</th>
+                    <th>Nikon D 500 DSLR Camera</th>
                     <th><img width="200px" height="200px" src={productImage2} /></th>
                     <th>2</th>
-                    <th>16,999</th>
-                    <th>33,998</th>
+                    <th>1,54,762</th>
+                    <th>3,09,524</th>
                 </tr>
             </tbody>
             </Table>

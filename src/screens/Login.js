@@ -10,8 +10,11 @@ function Login()
         password: "",
         error:false,
         errorMSG:"",
-        success: false
+        success:false
       });
+
+
+    const { email, password, error, errorMSG, success } = myvalues;
 
 
     const SuccessDiv = () =>
@@ -54,9 +57,6 @@ function Login()
           return SuccessDiv();
         }
       }
-
-    
-      const { email, password, error, errorMSG, success } = myvalues;
 
 
       const handleChange = inputtype_name => event => {

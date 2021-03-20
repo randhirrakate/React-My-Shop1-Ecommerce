@@ -18,15 +18,15 @@ function Home()
         <div className="row">
 
         <div className="col-lg-4">
-        <My_card_component product_image={productImage} product_name="Urban Fashion Sneakers For Men(Red)" product_price="1,860" product_description="Color Black, Red Urban Fashion" />
+        <My_card_component product_image={productImage} product_name="Urban Fashion Sneakers For Men(Red)" product_price=" Rs.1,860" product_description="Color Black, Red Urban Fashion" />
         </div>
 
         <div className="col-lg-4">
-        <My_card_component product_image={productImage2} product_name="Canon PowerShot SX430 IS" product_price="16,999" product_description="Take this travel-friendly" />
+        <My_card_component product_image={productImage2} product_name="Nikon D 500 DSLR Camera" product_price="Rs.1,54,762" product_description="Take this travel-friendly" />
         </div>
 
         <div className="col-lg-4">
-        <My_card_component product_image={productImage3} product_name="American Tourister" product_price="879" product_description="This is a genuine American Tourister product. " />
+        <My_card_component product_image={productImage3} product_name="American Tourister" product_price="Rs.879" product_description="This is a genuine American Tourister product. " />
         </div>
 
         </div>

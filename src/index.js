@@ -7,7 +7,7 @@ import Login from './screens/Login';
 import Register from './screens/Register';
 import Register_second from './screens/Register_second';
 import ProductInformation from './screens/ProductInformation';
-import About_Us from './screens/About_Us';
+import Contact_us from './screens/Contact_us';
 import Mycart from './screens/Mycart';
 import Insert_product from './screens/Insert_product';
 import Insert_category from './screens/Insert_category';
@@ -21,7 +21,7 @@ const routing = (<BrowserRouter>
        
   <Switch>
           <Route exact path="/"  component={Home} />
-          <Route path="/about_us"  component={About_Us} />
+          <Route path="/contact_us"  component={Contact_us} />
           <Route path="/login"  component={Login} />
           <Route path="/register"  component={Register} />
           <Route path="/register_second"  component={Register_second} />
