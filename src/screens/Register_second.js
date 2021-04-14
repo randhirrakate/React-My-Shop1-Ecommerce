@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import Navbar_component from '../components/Navbar_component';
-import {Function_registerAPI} from './API2';
+import {Function_registerAPI} from './API';
 
 export default function Register_second() 
 {

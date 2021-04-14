@@ -1,6 +1,6 @@
 import React,{useState}from 'react';
 import Navbar_component from '../components/Navbar_component';
-import {Function_insert_category} from './API2';
+import {Function_insert_category} from './API';
 import   '../App.css';
 
 

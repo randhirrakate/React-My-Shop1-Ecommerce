@@ -13,9 +13,9 @@ function Login()
         success:false
       });
 
+    const [datafromBackend, updatedatafromBackendadd] = useState();
 
     const { email, password, error, errorMSG, success } = myvalues;
-
 
     const SuccessDiv = () =>
       {
@@ -84,7 +84,8 @@ function Login()
             {
 
               setmyValues({...myvalues, success: true});
-              
+              updatedatafromBackendadd(data);
+              console.log(data);
               setmyValues({
                 ...myvalues,
                 email: "",

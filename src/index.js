@@ -11,6 +11,7 @@ import Contact_us from './screens/Contact_us';
 import Mycart from './screens/Mycart';
 import Insert_product from './screens/Insert_product';
 import Insert_category from './screens/Insert_category';
+import Testing from './screens/Testing';
 import Notfound from './screens/Notfound';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -29,6 +30,7 @@ const routing = (<BrowserRouter>
           <Route path="/Mycart"  component={Mycart} />
           <Route path="/Insert_product"  component={Insert_product} />
           <Route path="/Insert_category"  component={Insert_category} />
+          <Route path="/testing"  component={Testing} />
           <Route component={Notfound} ></Route>
     
   </Switch>

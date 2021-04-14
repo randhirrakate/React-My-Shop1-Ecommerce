@@ -1,9 +1,8 @@
 import Navbar_component from '../components/Navbar_component';
 import React, { useState } from "react";
-import {signup} from './API';
-import { useHistory } from "react-router";
+import { Function_registerAPI } from './API';
 
-import {BrowserRouter,Switch,Route,Link,Redirect} from "react-router-dom";
+import {BrowserRouter,Switch,Route,Link} from "react-router-dom";
 
 function Register()
 {
@@ -17,7 +16,7 @@ function Register()
       });
       
 
-      const [datafromBackend, datafromBackendadd] = useState();
+      const [datafromBackend, updatedatafromBackendadd] = useState();
     
       const { name, email, password, error, errorMSG, success } = values;
 
@@ -74,24 +73,28 @@ function Register()
       };
     
       const onSubmit = event =>
-       {
-        event.preventDefault();
-        setValues({ ...values, error: false });
-        signup({ name, email, password })
-          .then(data => {
+        {
+  
+         event.preventDefault();
+         
+         setValues({ ...values, error: false });
+  
+         Function_registerAPI({ name, email, password })
+           .then(data => 
+              {
             if (data.error) 
-            {
-              setValues({ ...values, error: true, errorMSG:data.error, success: false });
-            }
+             {
+               setValues({ ...values, error: true, errorMSG:data.error, success: false });
+             } 
             else if (data.err) 
-            {
-              setValues({ ...values, error: true, errorMSG:data.err, success: false });
-            } 
+                {
+                  setValues({ ...values, error: true, errorMSG:data.err, success: false });
+                }
             else 
-            {
-              setValues({...values, success: true});
+                {
+                  setValues({ ...values, success: true });    
 
-             datafromBackendadd(data);
+              updatedatafromBackendadd(data);
                 console.log(data);
               setValues({
                 ...values,
